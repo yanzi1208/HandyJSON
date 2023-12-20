@@ -44,7 +44,7 @@ extension NSNumber: _BuiltInBridgeType {
                 // normal number
                 let formatter = NumberFormatter()
                 formatter.numberStyle = .decimal
-                formatter.percentSymbol = "."
+                formatter.locale =  Locale(identifier: "en_US")
                 return formatter.number(from: str as String)
             }
         default:
